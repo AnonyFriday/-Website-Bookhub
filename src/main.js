@@ -7,7 +7,6 @@ import router from "./services/router";
 // VueX
 import store from "./services/store";
 
-
 // Use Vue Library and create the instance of the App
 createApp(App)
 	.use(router)
