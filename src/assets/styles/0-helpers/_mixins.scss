@@ -1,0 +1,35 @@
+// Breakpoint for responsive design
+// - Mobile-first approach
+// - @{breakpoint} : which has been static defined at the map
+// - Return : return the adaptive condiguration based on the screen size
+// - Dart Sass version
+
+$breakpoints: (
+  "small-mobile": 320px,
+  "mobile": 321px,
+  "tablet": 426px,
+  "laptop": 992px,
+  "large-laptop": 1200px,
+);
+
+@mixin design-respond-to($target-device) {
+  @if map-has-key($map: $breakpoints, $key: $target-device) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $target-device,
+    );
+    // Cannot apply (max-width: 600px) due to the new Dart Sass version
+    @if ($target-device == "small-mobile") {
+      @media (max-width: $value) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  } @else {
+    @warn ("Unfortunately, no value could be retrieved from `#{$target-device}` ."
+        + "Available breakpoints are : `#{map-keys($map: $breakpoints)}`");
+  }
+}

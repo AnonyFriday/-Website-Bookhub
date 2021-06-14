@@ -1,0 +1,96 @@
+@use "../0-helpers/index" as *;
+
+#header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $color-sage-green;
+  opacity: 0.9;
+  height: 165px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+
+    @include design-respond-to($target-device: "tablet") {
+      justify-content: center;
+    }
+  }
+
+  @include design-respond-to($target-device: "tablet") {
+    height: 180px;
+  }
+}
+
+.header__logo {
+  width: max-content;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+
+  color: $color-champagne;
+  a {
+    font-weight: bold;
+    font-size: 1.7rem;
+    display: inline-block;
+    color: $color-champagne;
+    line-height: 35px;
+
+    @include design-respond-to($target-device: "tablet") {
+      font-size: 2.2rem;
+    }
+  }
+
+  img {
+    display: inline-block;
+    width: 30px;
+    margin-right: 8px;
+    vertical-align: baseline;
+    @include design-respond-to($target-device: "tablet") {
+      width: 40px;
+    }
+  }
+}
+
+.header__navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+  li {
+    > a {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: $color-dark-blue;
+      line-height: 25px;
+      margin: 5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: $color-champagne;
+      border-radius: 10px;
+      padding: 0 5px;
+
+      @include design-respond-to($target-device: "tablet") {
+        font-size: 1.3rem;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.header__searchbar {
+  display: block;
+  margin: 5px auto;
+
+  @include design-respond-to($target-device: "tablet") {
+    margin: 15px auto;
+    width: 300px;
+  }
+}

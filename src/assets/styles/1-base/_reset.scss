@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+form,
+label,
+ul,
+ol,
+dl,
+fieldset,
+address {
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body,
+html {
+  min-height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Form Input Reset
+-----------------------------------------------*/
+label,
+select,
+button,
+input {
+  border: 0;
+  outline: 0;
+}
+
+/* Search Input
+-----------------------------------------------*/
+
+/* Make webkit render the search input like a normal text field */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}

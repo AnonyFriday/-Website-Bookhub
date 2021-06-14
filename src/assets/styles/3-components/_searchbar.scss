@@ -1,0 +1,10 @@
+@use "../0-helpers/index" as *;
+
+.searchbar {
+  display: block;
+  padding: 5px 5px 5px 25px;
+  background: $color-champagne url("~@/assets/images/magnifier.png") no-repeat;
+  background-size: 15px;
+  background-position: 5px center;
+  border-radius: 10px;
+}
