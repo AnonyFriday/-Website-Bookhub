@@ -1,5 +1,5 @@
 <template>
-	<div class="about">
+	<div class="subscribe">
 		<h1>This is a subscribe page</h1>
 		<router-view></router-view>
 	</div>

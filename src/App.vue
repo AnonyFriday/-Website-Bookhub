@@ -1,24 +1,25 @@
 <template>
-	<div class="border-solid">hello</div>
 	<header>
-		<div id="nav">
-			<router-link :to="{ name: 'about' }">About</router-link>
-			<router-link :to="{ name: 'reviews' }">About</router-link>
-			<router-link :to="{ name: 'affiliate' }">About</router-link>
-			<router-link :to="{ name: 'donate' }">About</router-link>
-			<router-link :to="{ name: 'subscribe' }">About</router-link>
-		</div>
+		<nav class="nav">
+			<ul>
+				<li><router-link :to="{ name: 'about' }">About</router-link></li>
+				<li><router-link :to="{ name: 'reviews' }">reviews</router-link></li>
+				<li><router-link :to="{ name: 'affiliate' }">affiliate</router-link></li>
+				<li><router-link :to="{ name: 'donate' }">donate</router-link></li>
+				<li><router-link :to="{ name: 'subscribe' }">subscribe</router-link></li>
+			</ul>
+		</nav>
 	</header>
 	<main>
-		<div class="container"></div>
+		<div class="container">
+			<router-view />
+		</div>
 	</main>
 	<footer>
 		<div class="container"></div>
 	</footer>
-
-	<router-view />
 </template>
 
 <style lang="scss">
-	@import "./styles/shared/main.scss";
+	@import "./assets/styles/shared/main.scss";
 </style>
