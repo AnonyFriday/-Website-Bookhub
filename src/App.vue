@@ -1,4 +1,5 @@
 <template>
+	<div class="border-solid">hello</div>
 	<header>
 		<div id="nav">
 			<router-link :to="{ name: 'about' }">About</router-link>
@@ -18,4 +19,6 @@
 	<router-view />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+	@import "./styles/shared/main.scss";
+</style>

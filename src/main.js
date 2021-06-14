@@ -7,6 +7,9 @@ import router from "./services/router";
 // VueX
 import store from "./services/store";
 
+// Tailwind CSS
+import "./assets/tailwind.css";
+
 // Use Vue Library and create the instance of the App
 createApp(App)
 	.use(router)
