@@ -1,0 +1,16 @@
+@use "../0-helpers/index" as *;
+
+.btn-primary {
+  font-size: 1rem;
+  color: $color-champagne;
+  text-transform: uppercase;
+  font-weight: 800;
+  box-shadow: inset 3px 6px 18px 1px rgba(0, 0, 0, 0.21);
+  background-color: $color-light-red;
+
+  &:hover {
+    box-shadow: none;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}

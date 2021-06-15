@@ -1,0 +1,38 @@
+@use "../0-helpers/index" as *;
+
+.socios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__item {
+    text-align: center;
+    a {
+      display: inline-block;
+      font-size: 0;
+
+      img {
+        display: inline-block;
+        width: 34px;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  @include design-respond-to($device: "tablet") {
+    justify-content: space-around;
+
+    a {
+      img {
+        width: 48px;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}

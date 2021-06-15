@@ -1,0 +1,24 @@
+@use "../0-helpers/index" as *;
+.logo {
+  &__name {
+    font-weight: bold;
+    font-size: 1.7rem;
+    display: inline-block;
+    color: $color-champagne;
+    line-height: 35px;
+
+    @include design-respond-to($device: "tablet") {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 30px;
+    margin-right: 8px;
+    vertical-align: baseline;
+    @include design-respond-to($device: "tablet") {
+      width: 40px;
+    }
+  }
+}

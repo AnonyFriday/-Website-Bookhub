@@ -1,37 +1,32 @@
 <template>
-	<header id="header">
+	<header class="header">
 		<div class="container">
 			<!-- Logo -->
 			<h1 class="header__logo">
-				<img :src="logoUrl" />
-				<a href="#">Bookhub</a>
+				<b-logo></b-logo>
 			</h1>
 
 			<!-- Search Bar -->
-			<form action="#">
-				<input type="text" class="header__searchbar searchbar" />
-			</form>
+			<div class="header__searchbar">
+				<b-search-bar></b-search-bar>
+			</div>
 
 			<!-- Navigation -->
-			<nav>
-				<ul class="header__navbar">
-					<li v-for="(page, index) in pages" :key="index">
-						<router-link :to="{ name: `${page}` }">{{ page }}</router-link>
-					</li>
-				</ul>
+			<nav class="header__navbar">
+				<b-nav-bar></b-nav-bar>
 			</nav>
 		</div>
 	</header>
 </template>
+
 <script>
+	import BLogo from "../BLogo.vue";
+	import BNavBar from "../BNavBar.vue";
+	import BSearchBar from "../BSearchBar.vue";
 	export default {
-		data() {
-			return {
-				logoUrl: require("@/assets/images/logo-bookhub.png"),
-				pages: ["donate", "about", "reviews", "affiliate", "subscribe"],
-			};
-		},
+		components: { BLogo, BSearchBar, BNavBar },
 	};
 </script>
+BNavBarript>
 
 <style></style>

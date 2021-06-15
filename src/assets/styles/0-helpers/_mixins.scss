@@ -12,14 +12,17 @@ $breakpoints: (
   "large-laptop": 1200px,
 );
 
-@mixin design-respond-to($target-device) {
-  @if map-has-key($map: $breakpoints, $key: $target-device) {
+@mixin design-respond-to($device) {
+  @if not map-has-key($map: $breakpoints, $key: $device) {
+    @warn ("Unfortunately, no value could be retrieved from `#{$device}` ."
+        + "Available breakpoints are : `#{map-keys($map: $breakpoints)}`");
+  } @else {
     $value: map-get(
       $map: $breakpoints,
-      $key: $target-device,
+      $key: $device,
     );
     // Cannot apply (max-width: 600px) due to the new Dart Sass version
-    @if ($target-device == "small-mobile") {
+    @if ($device == "small-mobile") {
       @media (max-width: $value) {
         @content;
       }
@@ -28,8 +31,28 @@ $breakpoints: (
         @content;
       }
     }
+  }
+}
+
+// Box-shadow mode for interior design
+// - @{modes} : which has been static defined at the map
+// - Return : return the box-shadow based on the key
+
+$modes: (
+  "light": 1px 1px 19px -1px rgba(255, 238, 238, 0.61),
+  "dark": 1px 1px 19px -1px rgba(49, 48, 48, 0.61),
+);
+
+@mixin generate-box-shadow($mode: "light") {
+  @if not map-has-key($map: $modes, $key: $mode) {
+    @warn ("Unfortunately, no value could be retrieved from `#{$mode}` ."
+        + "Available breakpoints are : `#{map-keys($map: $modes)}`");
   } @else {
-    @warn ("Unfortunately, no value could be retrieved from `#{$target-device}` ."
-        + "Available breakpoints are : `#{map-keys($map: $breakpoints)}`");
+    $value: map-get(
+      $map: $modes,
+      $key: $mode,
+    );
+    box-shadow: $value;
+    @content;
   }
 }

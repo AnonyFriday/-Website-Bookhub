@@ -1,0 +1,19 @@
+@use "../0-helpers/index" as *;
+
+.footer {
+  background-color: $color-dark-blue;
+  color: $color-champagne;
+
+  padding: 2rem 0 2rem 0;
+
+  &__socios {
+    margin-top: 2rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+}

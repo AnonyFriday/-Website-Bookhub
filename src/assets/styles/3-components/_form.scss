@@ -1,0 +1,25 @@
+@use "../0-helpers/index" as *;
+
+.form {
+  &__input {
+    height: 50px;
+    margin-bottom: 0.8rem;
+    @include generate-box-shadow($mode: "light");
+  }
+  &__textarea {
+    @include generate-box-shadow($mode: "light");
+    margin-bottom: 0.5rem;
+  }
+  &__submit {
+    margin-top: 1rem;
+    width: 100%;
+    height: 50px;
+  }
+
+  @include design-respond-to($device: "tablet") {
+    &__textarea {
+      @include generate-box-shadow($mode: "light");
+      height: 300px;
+    }
+  }
+}

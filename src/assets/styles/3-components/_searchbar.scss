@@ -2,8 +2,10 @@
 
 .searchbar {
   display: block;
-  padding: 5px 5px 5px 25px;
-  background: $color-champagne url("~@/assets/images/magnifier.png") no-repeat;
+  height: 25px;
+  padding: 5px 10px 5px 25px;
+  background-image: url("~@/assets/images/magnifier.png");
+  background-repeat: no-repeat;
   background-size: 15px;
   background-position: 5px center;
   border-radius: 10px;

@@ -1,11 +1,67 @@
 @use "../0-helpers/index" as *;
 
+// Set the default html
 html {
   font-size: 16px;
   font-family: $font-roboto-mono;
   font-weight: regular;
 }
 
+// Set the default body
 body {
   background-color: $color-baby-blue;
+}
+
+// Set the default input, textarea
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $color-champagne;
+  resize: none;
+
+  &::-webkit-input-placeholder {
+    font-family: $font-roboto-mono;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: $color-dark;
+  }
+
+  &::-moz-placeholder {
+    font-family: $font-roboto-mono;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: $color-dark;
+  }
+
+  &::-moz-placeholder {
+    font-family: $font-roboto-mono;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: $color-dark;
+  }
+
+  &::-ms-input-placeholder {
+    font-family: $font-roboto-mono;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: $color-dark;
+  }
+
+  &::placeholder {
+    font-family: $font-roboto-mono;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: $color-dark;
+  }
+}
+
+input[type="text"] {
+  font-family: $font-roboto-mono;
+}
+
+// Set the default button
+button {
+  border-radius: 10px;
 }
