@@ -2,7 +2,15 @@
 // - URL https://www.canva.com/colors/color-palettes/vintage-pastels/
 $color-dark: #26161f;
 $color-dark-blue: #1e2640;
-$color-lint: #dfdacd;
+$color-white: #fff;
 $color-baby-blue: #dae3e6;
 $color-champagne: #feefde;
 $color-light-red: #ff0080;
+$color-light-gray: #888;
+
+$color-background-gradient: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(255, 255, 255, 1) 15%,
+  rgb(243, 229, 212) 98%
+);

@@ -4,10 +4,11 @@
 .header {
   width: 100%;
   position: sticky;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: $color-dark-blue;
-  opacity: 0.8;
+  opacity: 0.95;
   height: 165px;
 
   .container {

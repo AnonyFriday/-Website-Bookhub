@@ -1,6 +1,8 @@
+@use "./function" as *;
+
 // Breakpoint for responsive design
 // - Mobile-first approach
-// - @{breakpoint} : which has been static defined at the map
+// - @{breakpoint} : which has been staticly defined at the map
 // - Return : return the adaptive condiguration based on the screen size
 // - Dart Sass version
 
@@ -34,25 +36,39 @@ $breakpoints: (
   }
 }
 
-// Box-shadow mode for interior design
+// Generate shadow mode for interior design
+// - Currently support: Text, Box
 // - @{modes} : which has been static defined at the map
-// - Return : return the box-shadow based on the key
+// - Return : return the shadow based on the key
 
 $modes: (
-  "light": 1px 1px 19px -1px rgba(255, 238, 238, 0.61),
-  "dark": 1px 1px 19px -1px rgba(49, 48, 48, 0.61),
+  "text": (
+    "light": 1px 1px 1px rgb(204, 222, 228),
+    "dark": "",
+  ),
+  "box": (
+    "light": 1px 1px 19px -1px rgba(255, 238, 238, 0.61),
+    "dark": 1px 1px 5px -1px rgba(17, 16, 16, 0.61),
+  ),
 );
 
-@mixin generate-box-shadow($mode: "light") {
-  @if not map-has-key($map: $modes, $key: $mode) {
-    @warn ("Unfortunately, no value could be retrieved from `#{$mode}` ."
-        + "Available breakpoints are : `#{map-keys($map: $modes)}`");
+@mixin generate-shadow($component: "text", $mode: "light") {
+  @if not map-has-key($map: $modes, $key: $component) {
+    @warn ("Unfortunately, no value could be retrieved from `#{$component}` ."
+        + "Available Variables : `#{map-keys($map: $modes)}`");
   } @else {
-    $value: map-get(
-      $map: $modes,
-      $key: $mode,
-    );
-    box-shadow: $value;
+    $value: map-deep-get($modes, $component, $mode);
+
+    // Text Shadown
+    @if $component == "text" {
+      text-shadow: $value;
+    }
+
+    // Box Shadown
+    @else if $component == "box" {
+      box-shadow: $value;
+    }
+
     @content;
   }
 }

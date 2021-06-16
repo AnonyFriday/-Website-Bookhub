@@ -1,0 +1,34 @@
+@use "../0-helpers/index" as *;
+.carousel {
+  &__title {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+
+    color: $color-dark-blue;
+    font-weight: 700;
+    background-color: $color-baby-blue;
+    border-radius: 5px;
+  }
+}
+
+.carousel-cell.is-selected {
+  width: 100%; /* half-width */
+  height: 160px;
+  margin-right: 10px;
+
+  img {
+    object-position: center;
+    object-fit: fill;
+  }
+}
+
+@include design-respond-to("tablet") {
+  .carousel-cell {
+    width: 50%;
+    height: 160px;
+    margin-right: 10px;
+  }
+}

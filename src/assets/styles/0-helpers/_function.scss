@@ -1,0 +1,12 @@
+// Get deep value from map sass
+// - Iterate over the map by keys spread operator
+// - Get the value at the current keys level
+// - @{map, keys...} : map has been defined at each mixins
+// - Return : value from the current map
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}

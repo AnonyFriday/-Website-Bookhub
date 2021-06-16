@@ -3,7 +3,6 @@
 .footer {
   background-color: $color-dark-blue;
   color: $color-champagne;
-
   padding: 2rem 0 2rem 0;
 
   &__socios {
@@ -12,8 +11,17 @@
 
   &__title {
     text-transform: uppercase;
+    font-weight: 700;
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
+  }
+
+  &__copyright {
+    margin-top: 2rem;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    text-align: center;
+    color: $color-light-gray;
   }
 }

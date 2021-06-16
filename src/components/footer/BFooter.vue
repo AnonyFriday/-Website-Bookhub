@@ -14,17 +14,19 @@
 			</div>
 
 			<!-- Copyright -->
-			<div clas="footer__copyright"></div>
+			<div class="footer__copyright">
+				<b-copyright></b-copyright>
+			</div>
 		</div>
 	</footer>
 </template>
 
 <script>
+	import BCopyright from "../footer/BCopyright.vue";
 	import BForm from "./BForm.vue";
-	import BSocios from ".BSocios.vue";
+	import BSocios from "./BSocios.vue";
 	export default {
-		components: { BForm, BSocios },
-		data() {},
+		components: { BForm, BSocios, BCopyright },
 	};
 </script>
 

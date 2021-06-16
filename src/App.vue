@@ -10,9 +10,9 @@
 </template>
 
 <script>
-	import BFooter from "./components/footer/BFooter.vue";
-	import BHeader from "./components/header/BHeader.vue";
-	import BMain from "./components/main/BMain.vue";
+	import BFooter from "./components/footer/BFooter";
+	import BHeader from "./components/header/BHeader";
+	import BMain from "./components/main/BMain";
 
 	export default {
 		components: { BHeader, BMain, BFooter },

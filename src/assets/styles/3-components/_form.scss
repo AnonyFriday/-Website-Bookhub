@@ -4,10 +4,10 @@
   &__input {
     height: 50px;
     margin-bottom: 0.8rem;
-    @include generate-box-shadow($mode: "light");
+    @include generate-shadow($component: "box", $mode: "light");
   }
   &__textarea {
-    @include generate-box-shadow($mode: "light");
+    @include generate-shadow($component: "box", $mode: "light");
     margin-bottom: 0.5rem;
   }
   &__submit {
@@ -18,7 +18,6 @@
 
   @include design-respond-to($device: "tablet") {
     &__textarea {
-      @include generate-box-shadow($mode: "light");
       height: 300px;
     }
   }

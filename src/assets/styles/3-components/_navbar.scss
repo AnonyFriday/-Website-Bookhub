@@ -21,8 +21,19 @@
       background-color: $color-champagne;
       border-radius: 10px;
       padding: 0 5px;
+    }
+  }
 
-      @include design-respond-to($device: "tablet") {
+  //! Can not render the target color
+  // &__item--important {
+  //   > a {
+  //     background-color: $color-dark-blue;
+  //   }
+  // }
+
+  @include design-respond-to($device: "tablet") {
+    li {
+      > a {
         font-size: 1.2rem;
         padding: 2px 10px;
       }

@@ -1,7 +1,5 @@
 <template>
-	<div class="subscribe">
-		<h1>This is a subscribe page</h1>
-	</div>
+	<p>@2021 Bookhub. All Rights Reserved</p>
 </template>
 
 <script>
