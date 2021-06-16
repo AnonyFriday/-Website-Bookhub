@@ -20,9 +20,9 @@
 </template>
 
 <script>
-	import BLogo from "../BLogo.vue";
-	import BNavBar from "../BNavBar.vue";
-	import BSearchBar from "../BSearchBar.vue";
+	import BLogo from "./BLogo.vue";
+	import BNavBar from "./BNavBar.vue";
+	import BSearchBar from "./BSearchBar.vue";
 	export default {
 		components: { BLogo, BSearchBar, BNavBar },
 	};

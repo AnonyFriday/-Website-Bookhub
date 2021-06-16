@@ -12,15 +12,19 @@
 				<h2 class="footer__title">meet us</h2>
 				<b-socios></b-socios>
 			</div>
+
+			<!-- Copyright -->
+			<div clas="footer__copyright"></div>
 		</div>
 	</footer>
 </template>
 
 <script>
-	import BForm from "../BForm.vue";
-	import BSocios from "../BSocios.vue";
+	import BForm from "./BForm.vue";
+	import BSocios from ".BSocios.vue";
 	export default {
-		components: { BSocios, BForm },
+		components: { BForm, BSocios },
+		data() {},
 	};
 </script>
 
