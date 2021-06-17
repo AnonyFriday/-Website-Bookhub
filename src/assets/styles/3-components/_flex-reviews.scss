@@ -1,0 +1,50 @@
+@use "../0-helpers/index" as *;
+.flex-reviews {
+  &__title {
+    position: relative;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    text-transform: uppercase;
+
+    // Underline
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $color-dark;
+      height: 1px;
+      width: 30%;
+      top: 103%;
+      left: 0;
+      border-radius: 10px;
+      animation: underline-splashing 1s 1;
+      height: 5px;
+    }
+  }
+
+  // Flex Content
+  .row {
+    @include generate-perfect-flex($childWidth: 48%, $childsPerRow: 2);
+    &__cell {
+      border: 1px solid $color-dark-blue;
+    }
+  }
+}
+
+// Keyframe for underlining title animation
+@keyframes underline-splashing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@include design-respond-to($device: "tablet") {
+  .flex-reviews {
+    .row {
+      @include generate-perfect-flex($childWidth: 32%, $childsPerRow: 3);
+    }
+  }
+}

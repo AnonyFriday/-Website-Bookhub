@@ -72,3 +72,23 @@ $modes: (
     @content;
   }
 }
+
+// Generate perfect grid gap between childrens
+// - @{The child's width made up } : %, px, rem,....
+// - Formular: margin-bottom =
+//          ( total-parent-width - ( childWidth * numsChild ) ) %
+//                                            ( numsChild - 1 )
+// - Return : Void
+
+@mixin generate-perfect-flex($childWidth: 50%, $childsPerRow: 1) {
+  & {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    > * {
+      flex: 0 0 $childWidth;
+      margin-bottom: calc(calc(100% - calc(#{$childsPerRow} * #{$childWidth})) / (#{$childsPerRow} - 1));
+    }
+  }
+}

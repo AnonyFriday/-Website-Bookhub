@@ -4,7 +4,7 @@
 		<h2 class="carousel__title">{{ title }}</h2>
 
 		<!-- Carousel Slides -->
-		<vueper-slides lazy lazy-load-on-drag autoplay height="100" pause-on-hover="true">
+		<vueper-slides lazy lazy-load-on-drag autoplay>
 			<vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.imageUrl" :content="slide.content"></vueper-slide>
 		</vueper-slides>
 	</div>
