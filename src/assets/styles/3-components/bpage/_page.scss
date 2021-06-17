@@ -1,0 +1,22 @@
+@use "../../0-helpers/index" as *;
+
+.page {
+  padding: 1.4rem;
+  border: 1.5px solid $color-dark-blue;
+  border-radius: 0.5rem;
+
+  @include generate-shadow($component: "box", $mode: "dark");
+
+  &__header {
+    text-align: center;
+    position: relative;
+
+    &::after {
+      @include generate-underline($width: 100%, $height: 2px);
+    }
+  }
+
+  &__main {
+    margin-top: 2rem;
+  }
+}

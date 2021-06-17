@@ -1,0 +1,27 @@
+@use "../0-helpers/index" as *;
+
+.blockquote {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    flex: 0 0 24px;
+  }
+
+  &__content {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+  }
+
+  &__date {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    color: $color-dark-blue;
+  }
+}

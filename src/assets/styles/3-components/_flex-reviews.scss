@@ -9,16 +9,7 @@
 
     // Underline
     &::after {
-      position: absolute;
-      content: "";
-      background-color: $color-dark;
-      height: 1px;
-      width: 30%;
-      top: 103%;
-      left: 0;
-      border-radius: 10px;
-      animation: underline-splashing 1s 1;
-      height: 5px;
+      @include generate-underline($width: 30%, $height: 5px);
     }
   }
 
@@ -28,16 +19,6 @@
     &__cell {
       border: 1px solid $color-dark-blue;
     }
-  }
-}
-
-// Keyframe for underlining title animation
-@keyframes underline-splashing {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 30%;
   }
 }
 
