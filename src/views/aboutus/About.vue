@@ -23,51 +23,23 @@
 		</section>
 
 		<!-- Fancy Video -->
-		<section class="about__carousel">
-			<div class="carousel">
-				<h2 class="carousel__title">dummy text</h2>
-				<!-- Flicky Carousel  -->
-				<div
-					class="main-carousel"
-					data-flickity='
-        { "cellAlign": "left", "contain": true, "wrapAround": true  }'
-				>
-					<div class="carousel-cell">
-						<a href="#">
-							<img :src="require('@/assets/images/dummy-image.jpg')" />
-						</a>
-					</div>
-					<div class="carousel-cell">
-						<a href="#">
-							<img :src="require('@/assets/images/dummy-image.jpg')" />
-						</a>
-					</div>
-					<div class="carousel-cell">
-						<a href="#">
-							<img :src="require('@/assets/images/dummy-image.jpg')" />
-						</a>
-					</div>
-					<div class="carousel-cell">
-						<a href="#">
-							<img :src="require('@/assets/images/dummy-image.jpg')" />
-						</a>
-					</div>
-					<div class="carousel-cell">
-						<a href="#">
-							<img :src="require('@/assets/images/dummy-image.jpg')" />
-						</a>
-					</div>
-				</div>
-			</div>
+		<section class="about__carousel" v-for="(title, index) in carousels" :key="index">
+			<b-carousel :title="title"></b-carousel>
 		</section>
 
 		<!-- New Reviews -->
-		<section class="about__carousel"></section>
 	</div>
 </template>
 
 <script>
-	export default {};
+	import BCarousel from "../../components/vendor/BCarousel.vue";
+	export default {
+		//! Will be emitted and moved to VueX
+		data: () => ({
+			carousels: ["the book that changes me", "new review"],
+		}),
+		components: { BCarousel },
+	};
 </script>
 
 <style lang="scss" scoped></style>

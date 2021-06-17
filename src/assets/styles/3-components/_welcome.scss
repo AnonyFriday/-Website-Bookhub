@@ -19,3 +19,16 @@
     color: $color-dark-blue;
   }
 }
+
+@include design-respond-to($device: "laptop") {
+  .welcome {
+    &__title {
+      font-size: 4rem;
+      line-height: 100px;
+    }
+
+    &__sub-title {
+      font-size: 2rem;
+    }
+  }
+}
