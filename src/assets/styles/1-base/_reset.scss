@@ -1,9 +1,16 @@
-* {
+/* Everything Reset
+-----------------------------------------------*/
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* Highest Elements Reset
+-----------------------------------------------*/
 
 body,
 html {
@@ -13,6 +20,9 @@ html {
 main {
   height: 100%;
 }
+
+/* List Reset
+-----------------------------------------------*/
 
 ul {
   list-style-type: none;
@@ -47,9 +57,9 @@ address {
 a,
 a:hover,
 a:focus,
-a:active {
+a:active,
+a:visited {
   text-decoration: none;
-  color: inherit;
 }
 
 img {

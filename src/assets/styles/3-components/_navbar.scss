@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 1rem;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -13,23 +12,22 @@
     > a {
       display: inline-block;
       font-size: 0.8rem;
-      color: $color-dark-blue;
+      color: $color-champagne;
       line-height: 25px;
       margin: 5px;
       text-transform: uppercase;
       font-weight: bold;
-      background-color: $color-champagne;
-      border-radius: 10px;
-      padding: 0 5px;
+
+      position: relative;
+
+      &:hover,
+      &.active {
+        &::after {
+          @include generate-underline($width: 100%, $height: 1px, $color: $color-champagne);
+        }
+      }
     }
   }
-
-  //! Can not render the target color
-  // &__item--important {
-  //   > a {
-  //     background-color: $color-dark-blue;
-  //   }
-  // }
 
   @include design-respond-to($device: "tablet") {
     li {

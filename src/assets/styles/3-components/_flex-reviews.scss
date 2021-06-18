@@ -1,15 +1,15 @@
 @use "../0-helpers/index" as *;
 .flex-reviews {
   &__title {
-    position: relative;
     font-size: 1.8rem;
     margin-bottom: 2rem;
     display: inline-block;
     text-transform: uppercase;
 
+    position: relative;
     // Underline
     &::after {
-      @include generate-underline($width: 30%, $height: 5px);
+      @include generate-underline($width: 10%, $height: 5px);
     }
   }
 

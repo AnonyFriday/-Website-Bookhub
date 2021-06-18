@@ -1,7 +1,6 @@
 <template>
 	<div class="blockquote">
 		<img class="blockquote__img" :src="imageSmileFaceUrl" />
-		<h3 class="blockquote__content">{{ staticQuote }}</h3>
 		<span class="blockquote__date">{{ datePublished }}</span>
 	</div>
 </template>
@@ -11,7 +10,6 @@
 		//! Data will be converted into VueX at the later phase
 		data: () => ({
 			imageSmileFaceUrl: require("@/assets/images/icon-reading-book.png"),
-			staticQuote: "Bookhub - Knowledge is everything.",
 			datePublished: "Published On 03, May 2021",
 		}),
 	};

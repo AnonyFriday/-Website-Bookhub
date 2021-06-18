@@ -4,7 +4,7 @@
     font-weight: bold;
     font-size: 1.7rem;
     display: inline-block;
-    color: $color-champagne;
+    color: $color-white;
     line-height: 35px;
 
     @include design-respond-to($device: "tablet") {

@@ -11,6 +11,7 @@
   opacity: 0.95;
   height: 165px;
 
+  // configure the container a bit
   .container {
     display: flex;
     flex-direction: column;
@@ -28,16 +29,12 @@
 
 // Logo
 .header__logo {
-  width: max-content;
   margin: 0 auto;
-  height: auto;
   text-align: center;
-  color: $color-champagne;
 }
 
 // Search bar
 .header__searchbar {
-  display: block;
   margin: 5px auto;
   width: 70%;
 

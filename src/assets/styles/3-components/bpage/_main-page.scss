@@ -1,0 +1,25 @@
+@use "../../0-helpers/index" as *;
+
+.main-page {
+  &__article {
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    font-size: 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
+    background-size: 100% 2em;
+    background-position-y: calc(1rem + 8px);
+    line-height: 2rem;
+    margin-bottom: 3rem;
+  }
+}

@@ -94,29 +94,62 @@ $modes: (
   }
 }
 
-// Generate auto splashing underline                                        ( numsChild - 1 )
+//! Experimental
+//! Error on interpolating values into keyframes function
+// Generate auto splashing underline
 // - Return : Beautiful splashing underline :)) + animation
 
-@mixin generate-underline($width: 100%, $height: 1px) {
+@mixin generate-underline($width: 100%, $height: 1px, $color: $color-dark) {
   & {
     position: absolute;
     content: "";
-    background-color: $color-dark;
+    background-color: $color;
     height: $height;
-    width: $width;
     top: 103%;
     left: 0;
     border-radius: 10px;
-    animation: underline-splashing 1s 1;
-  }
-
-  // Keyframe for underlining title animation
-  @keyframes underline-splashing {
-    0% {
-      width: 0%;
+    // Keyframe for underlining title animation
+    // - forwards keep the property after the end state
+    animation: underline-splashing 2s 1 forwards;
+    @-webkit-keyframes underline-splashing {
+      from {
+        width: 0%;
+      }
+      to {
+        width: #{$width};
+      }
     }
-    100% {
-      width: $width;
+    @-moz-keyframes underline-splashing {
+      from {
+        width: 0%;
+      }
+      to {
+        width: #{$width};
+      }
+    }
+    @-ms-keyframes underline-splashing {
+      from {
+        width: 0%;
+      }
+      to {
+        width: #{$width};
+      }
+    }
+    @-o-keyframes underline-splashing {
+      from {
+        width: 0%;
+      }
+      to {
+        width: #{$width};
+      }
+    }
+    @keyframes underline-splashing {
+      from {
+        width: 0%;
+      }
+      to {
+        width: #{$width};
+      }
     }
   }
 }

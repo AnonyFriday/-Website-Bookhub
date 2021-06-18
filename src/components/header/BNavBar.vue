@@ -11,17 +11,13 @@
 		computed: {},
 		data() {
 			return {
+				isActive: true,
 				specialPage: ["donate"],
 				pages: ["donate", "about", "reviews", "affiliate", "subscribe"],
 			};
 		},
 
-		//! Error on rendering "donate" background color
-		// methods: {
-		// 	isSpecialPage(page) {
-		// 		return this.specialPage.indexOf(page) == -1 ? "" : "navbar__item--important";
-		// 	},
-		// },
+		methods: {},
 	};
 </script>
 

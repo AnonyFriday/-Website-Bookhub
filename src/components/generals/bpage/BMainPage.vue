@@ -2,8 +2,8 @@
 	<div class="main-page">
 		<article v-for="(review, index) in fakeReviews" :key="index" class="main-page__article">
 			<h3 class="main-page__title">{{ review.title }}</h3>
-			<p class="main-page__content">{{ review.content }}</p>
 			<img class="main-page__image" :src="review.imageUrl" />
+			<p class="main-page__content">{{ review.content }}</p>
 		</article>
 	</div>
 </template>
