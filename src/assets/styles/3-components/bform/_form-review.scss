@@ -1,0 +1,15 @@
+@use "../../0-helpers/index" as *;
+.form-review {
+  &__input {
+    @include generate-perfect-flex($childWidth: 48%, $childsPerRow: 2) {
+      align-items: center;
+    }
+  }
+
+  &__sections {
+    margin-top: 0.5rem;
+    > p {
+      margin-bottom: 1rem;
+    }
+  }
+}

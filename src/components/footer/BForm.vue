@@ -1,10 +1,10 @@
 <template>
 	<form class="form" action="#" method="GET">
-		<input class="form__input" type="text" name="name" placeholder="Name" />
-		<input class="form__input" type="text" name="phone" placeholder="phone" />
+		<input class="form__input" type="text" :name="form_type.first_input_name" :placeholder="form_type.first_input_name" />
+		<input class="form__input" type="text" name="form_type.first_input_name" placeholder="phone" />
 
 		<!--Input File Image -->
-		<div :v-show="isDisplayFileInput" style="box-shadow: none; margin-bottom:8px">
+		<div v-if="isDisplayFileInput" style="box-shadow: none; margin-bottom:8px">
 			<b-file-input></b-file-input>
 		</div>
 
@@ -19,16 +19,24 @@
 	import BFileInput from "./BFileInput.vue";
 	export default {
 		components: { BFileInput },
-		computed: {
-			isDisplayFileInput: function() {
-				return this.$props.type === "section" ? true : false;
+
+		props: {
+			form: {
+				type: String,
+				require: true,
 			},
 		},
-		props: {
-			type: String,
-		},
+
 		data() {
-			return {};
+			return {
+				//!  Error
+				form_type: {
+					first_input_name: this.$props.form === "footer" ? "name" : "section name",
+					second_input_name: "phone",
+					textaread_name: "content",
+					is_display_fileInput: false,
+				},
+			};
 		},
 	};
 </script>

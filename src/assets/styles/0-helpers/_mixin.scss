@@ -86,6 +86,7 @@ $modes: (
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    @content;
 
     > * {
       flex: 0 0 $childWidth;

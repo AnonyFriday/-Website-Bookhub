@@ -1,9 +1,12 @@
 <template>
 	<div class="affiliate">
+		<!-- Page Header -->
 		<section class="affiliate__header">
-			<h1 class="page-header">add a review</h1>
+			<h2 class="page-header">add a review</h2>
 		</section>
-		<section class="affliate__submit">
+
+		<!-- Page Form -->
+		<section class="affliate__form">
 			<form class="form-review">
 				<!-- Title -->
 				<div class="form-review__input">
@@ -17,15 +20,10 @@
 					<input type="text" name="book_author" value="" />
 				</div>
 
+				<!-- Form Sections -->
 				<div class="form-review__sections">
 					<p>Section</p>
-
-					<b-form :type="section"></b-form>
-					<!-- <div>
-						<input type="text" name="section_name" />
-						<input type="file" @change="onFileImageSelected" />
-						<input type="textarea" />
-					</div> -->
+					<b-form :isDisplayFileInput="true"></b-form>
 				</div>
 			</form>
 		</section>
@@ -37,11 +35,6 @@
 	//! The file below will be moved to the vuex store
 	export default {
 		components: { BForm },
-		methods: {
-			onFileSelected(event) {
-				console.log(event);
-			},
-		},
 	};
 </script>
 

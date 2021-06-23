@@ -4,7 +4,7 @@
 			<!-- Form -->
 			<div class="footer__form">
 				<h2 class="footer__title">Contact Us</h2>
-				<b-form></b-form>
+				<b-form :form="footer"></b-form>
 			</div>
 
 			<!-- Socios -->
@@ -27,6 +27,9 @@
 	import BSocios from "./BSocios.vue";
 	export default {
 		components: { BForm, BSocios, BCopyright },
+		data() {
+			return {};
+		},
 	};
 </script>
 
