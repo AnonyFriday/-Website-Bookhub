@@ -4,7 +4,7 @@
 			<!-- Form -->
 			<div class="footer__form">
 				<h2 class="footer__title">Contact Us</h2>
-				<b-form :form="footer"></b-form>
+				<b-form></b-form>
 			</div>
 
 			<!-- Socios -->

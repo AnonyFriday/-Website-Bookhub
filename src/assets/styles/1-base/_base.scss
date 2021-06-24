@@ -17,9 +17,10 @@ main {
   margin: 3rem 0;
 }
 
-// Set the default input, textarea
+// Set the default input, textarea, select
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -62,11 +63,41 @@ textarea {
   }
 }
 
-input[type="text"] {
+// Input Specific Type
+input[type="text"],
+input[type="file"] {
   font-family: $font-roboto-mono;
+}
+
+// Input [type=file]
+
+input[type="file"] {
+  -webkit-appearance: textfield;
+  position: relative;
+  -webkit-box-sizing: border-box;
+}
+input[type="file"]::-webkit-file-upload-button {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  font-family: $font-roboto-mono;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background-color: $color-dark-blue;
+  color: $color-champagne;
 }
 
 // Set the default button
 button {
   border-radius: 10px;
+}
+
+// Select
+select {
+  background-color: $color-dark-blue;
+  border-radius: 10px;
+  color: $color-champagne;
 }

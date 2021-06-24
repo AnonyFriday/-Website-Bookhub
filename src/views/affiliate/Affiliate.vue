@@ -2,39 +2,29 @@
 	<div class="affiliate">
 		<!-- Page Header -->
 		<section class="affiliate__header">
-			<h2 class="page-header">add a review</h2>
+			<b-page-header :name="page_header"></b-page-header>
 		</section>
 
 		<!-- Page Form -->
-		<section class="affliate__form">
-			<form class="form-review">
-				<!-- Title -->
-				<div class="form-review__input">
-					<p>Book Title</p>
-					<input type="text" name="book_title" value="" />
-				</div>
-
-				<!-- Author -->
-				<div class="form-review__input">
-					<p>Book Author</p>
-					<input type="text" name="book_author" value="" />
-				</div>
-
-				<!-- Form Sections -->
-				<div class="form-review__sections">
-					<p>Section</p>
-					<b-form :isDisplayFileInput="true"></b-form>
-				</div>
-			</form>
+		<section class="affliate__form-review">
+			<b-form-review></b-form-review>
 		</section>
 	</div>
 </template>
 
 <script>
-	import BForm from "../../components/footer/BForm.vue";
-	//! The file below will be moved to the vuex store
+	import BPageHeader from "../../components/generals/BPageHeader.vue";
+	import BFormReview from "../../components/generals/BFormReview.vue";
 	export default {
-		components: { BForm },
+		data() {
+			return {
+				page_header: "Add a new Review",
+			};
+		},
+		components: {
+			BPageHeader,
+			BFormReview,
+		},
 	};
 </script>
 

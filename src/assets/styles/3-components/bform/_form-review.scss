@@ -1,15 +1,36 @@
 @use "../../0-helpers/index" as *;
 .form-review {
-  &__input {
-    @include generate-perfect-flex($childWidth: 48%, $childsPerRow: 2) {
-      align-items: center;
+  // Select Book
+  &__select-book {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.3rem;
+    }
+
+    // Choose book
+    select {
+      flex: 0 0 65%;
     }
   }
 
+  // Sections
   &__sections {
-    margin-top: 0.5rem;
-    > p {
+    span {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    input,
+    textarea {
+      border: 1px dashed black;
       margin-bottom: 1rem;
+      background-color: $color-baby-blue;
     }
   }
 }

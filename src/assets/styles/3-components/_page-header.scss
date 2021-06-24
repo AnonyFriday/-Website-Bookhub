@@ -1,5 +1,7 @@
 .page-header {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 700;
+  > h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }
