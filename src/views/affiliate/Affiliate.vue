@@ -6,7 +6,7 @@
 		</section>
 
 		<!-- Page Form -->
-		<section class="affliate__form-review">
+		<section class="affiliate__form-review">
 			<b-form-review></b-form-review>
 		</section>
 	</div>

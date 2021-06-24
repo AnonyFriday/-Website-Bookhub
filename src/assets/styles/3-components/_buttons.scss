@@ -14,3 +14,20 @@
     cursor: pointer;
   }
 }
+
+// Donation Button
+.dbox-donation-button {
+  background: #1e2640 url(https://donorbox.org/images/red_logo.png) no-repeat 18px;
+  color: #fff;
+  text-decoration: none;
+  font-family: Verdana, sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  padding: 13px 17px;
+  padding-left: 56px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 #1f5a89;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}

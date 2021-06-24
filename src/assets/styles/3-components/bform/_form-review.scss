@@ -15,6 +15,9 @@
     // Choose book
     select {
       flex: 0 0 65%;
+      border: 1px dashed black;
+      background-color: $color-baby-blue;
+      color: $color-dark;
     }
   }
 

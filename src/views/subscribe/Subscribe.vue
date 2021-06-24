@@ -1,11 +1,18 @@
 <template>
 	<div class="subscribe">
-		<h1>This is a subscribe page</h1>
+		<section class="subscribe__header">
+			<b-page-header></b-page-header>
+		</section>
 	</div>
 </template>
 
 <script>
-	export default {};
+	import BPageHeader from "../../components/generals/BPageHeader.vue";
+	export default {
+		components: {
+			BPageHeader,
+		},
+	};
 </script>
 
 <style></style>
