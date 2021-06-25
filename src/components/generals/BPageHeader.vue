@@ -1,6 +1,7 @@
 <template>
 	<div class="page-header">
 		<h2>{{ name }}</h2>
+		<slot name="subtitle"></slot>
 	</div>
 </template>
 

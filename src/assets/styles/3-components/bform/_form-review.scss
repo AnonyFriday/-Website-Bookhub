@@ -10,6 +10,10 @@
 
     span {
       font-size: 1.3rem;
+
+      @include design-respond-to($device: "tablet") {
+        font-size: 2rem;
+      }
     }
 
     // Choose book
@@ -27,6 +31,11 @@
       display: block;
       font-size: 1.3rem;
       margin-bottom: 0.4rem;
+
+      @include design-respond-to($device: "tablet") {
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+      }
     }
 
     input,
@@ -34,6 +43,14 @@
       border: 1px dashed black;
       margin-bottom: 1rem;
       background-color: $color-baby-blue;
+    }
+  }
+
+  &__submit {
+    text-align: center;
+    button {
+      height: 50px;
+      width: 100%;
     }
   }
 }

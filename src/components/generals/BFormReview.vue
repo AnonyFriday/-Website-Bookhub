@@ -18,6 +18,10 @@
 			<input type="file" accept="image/*" @change="onUploadImage" />
 			<textarea class="form__textarea" type="text" cols="10" rows="10" placeholder="Content"></textarea>
 		</div>
+		<!-- Form Submit Button -->
+		<div class="form-review__submit">
+			<button type="submit" class="btn-primary">Submit Review</button>
+		</div>
 	</form>
 </template>
 
