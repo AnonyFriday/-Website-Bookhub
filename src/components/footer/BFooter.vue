@@ -27,6 +27,9 @@
 	import BSocios from "./BSocios.vue";
 	export default {
 		components: { BForm, BSocios, BCopyright },
+		data() {
+			return {};
+		},
 	};
 </script>
 

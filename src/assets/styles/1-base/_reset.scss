@@ -90,3 +90,6 @@ input[type="search"] {
 ::-webkit-search-decoration {
   display: none;
 }
+
+
+/* "x::-webkit-file-upload-button" forces the rules to only apply to browsers that support this pseudo-element */

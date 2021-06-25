@@ -1,0 +1,10 @@
+@use "../0-helpers/index" as *;
+.subscribe {
+  &__header {
+    margin-bottom: 2rem;
+  }
+  &__button {
+    text-align: center;
+  }
+}
+

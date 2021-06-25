@@ -1,0 +1,34 @@
+@use "../0-helpers/index" as *;
+.page-header {
+  > h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+// Slot for Page Header at slot subtitle
+.page-header {
+  text-align: center;
+  &__subtitle {
+    margin: 1rem auto;
+  }
+
+  &__features {
+    display: inline-block;
+    .feature {
+      text-align: left;
+      &__content {
+        line-height: 1.3rem;
+        margin-bottom: 8px;
+      }
+
+      &__content::before {
+        content: "\2714";
+        font-size: 2rem;
+        margin-right: 8px;
+        color: $color-light-red;
+      }
+    }
+  }
+}
