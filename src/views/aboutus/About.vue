@@ -31,6 +31,5 @@
 		components: { BCarousel, BWelcome, BFlexCategories },
 	};
 </script>
-, BFlexCategories
 
 <style lang="scss" scoped></style>
